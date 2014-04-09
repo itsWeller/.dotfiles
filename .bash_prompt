@@ -30,11 +30,13 @@ SOLAR_MAGENTA=$(tput setaf 125)
 SOLAR_VIOLET=$(tput setaf 61)
 SOLAR_BLUE=$(tput setaf 30)
 SOLAR_CYAN=$(tput setaf 37)
-SOLAR_GREEN=$(tput setaf 64)
 SOLAR_WHITE=$(tput setaf 254)
+#SOLAR_GREEN=$(tput setaf 64)
+SOLAR_GREEN=$(tput setaf 58)
 
 SCRATCH=$(tput setaf 101)
 SCARTCH_T=$(tput setaf 30)
+SCARTCH_TT=$(tput setaf 94)
 
 style_user="$RESET$SOLAR_ORANGE"
 style_host="$RESET$SOLAR_YELLOW"
@@ -78,16 +80,17 @@ function prompt_git() {
 PS1="\n" # Newline
 PS1+="\[$style_path\]"
 PS1+="┌─"
-PS1+="\[$style_user\]"
-PS1+="[\u" # Username
+PS1+="[\[$style_user\]"
+PS1+="\u" # Username
 PS1+="\[$style_chars\]" # @
 PS1+="@"
 PS1+="\[$style_host\]"
-PS1+="\h]" # Host
+PS1+="\h" # Host
 PS1+='\[$style_chars\]' # :
 PS1+="\[$style_path\]"
-PS1+="\[$SCRATCH_T\]─["
-PS1+="\[$SCRATCH\]\W\[$style_path\]]" # Working directory
+PS1+="\[$SCRATCH_T\]]─["
+PS1+="\[$SCRATCH\]\w\[$style_path\]]" # Working directory
+PS1+="─[\$SCARTCH_TT\]\@\[$style_path\]]"
 PS1+="\n" # Newline
 PS1+="└─"
 PS1+="["
