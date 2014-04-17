@@ -76,26 +76,27 @@ function prompt_git() {
 }
 
 
+
 # Build the prompt
-PS1="\n" # Newline
-PS1+="\[$style_path\]"
-PS1+="┌─"
-PS1+="[\[$style_user\]"
-PS1+="\u" # Username
-PS1+="\[$style_chars\]" # @
-PS1+="@"
-PS1+="\[$style_host\]"
-PS1+="\h" # Host
-PS1+='\[$style_chars\]' # :
-PS1+="\[$style_path\]"
-PS1+="\[$SCRATCH_T\]]─["
-PS1+="\[$SCRATCH\]\w\[$style_path\]]" # Working directory
-PS1+="─[\$SCARTCH_TT\]\@\[$style_path\]]"
-PS1+="\n" # Newline
-PS1+="└─"
-PS1+="["
-PS1+="\[$style_chars\]\$"
-PS1+="\[$style_path\]"
-PS1+="]─> "
-PS1+="\[$RESET\]" # $ (and reset color)
+ PS1="\n" # Newline
+ PS1+="\[$style_path\]"
+ PS1+="┌─"
+ PS1+="[\[$style_user\]"
+ PS1+="\u" # Username
+ PS1+="\[$style_chars\]" # @
+ PS1+="@"
+ PS1+="\[$style_host\]"
+ PS1+="\h" # Host
+ PS1+='\[$style_chars\]' # :
+ PS1+="\[$style_path\]"
+ PS1+="\[$SCRATCH_T\]]─["
+ PS1+="\[$SCRATCH\]\w\[$style_path\]]" # Working directory
+ PS1+="─[\$SCARTCH_TT\]\@\[$style_path\]]"
+ PS1+="\n" # Newline
+ PS1+="└─"
+ PS1+="["
+ PS1+="\[$style_chars\]\$"
+ PS1+="\[$style_path\]"
+ PS1+="]─> "
+ PS1+="\[$RESET\]" # $ (and reset color)
 

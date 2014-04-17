@@ -1,4 +1,5 @@
 execute pathogen#infect()
+
 syntax on
 set background=dark
 colorscheme solarized
@@ -11,9 +12,9 @@ set wildmode=longest:full
 set wildignore=*.o,*~,*.pyc
 set wildmenu
 
-set ruler
-
 set hid
+set ruler
+set nu
 
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -33,7 +34,12 @@ set ffs=unix,dos,mac
 set ai
 set si
 set wrap
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-
+set laststatus=2
+set noshowmode
+set ttimeoutlen=0
