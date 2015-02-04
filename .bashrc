@@ -1,4 +1,4 @@
-export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
+# export PATH="$(brew --prefix josegonzalez/php/php55)/bin:$PATH"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export RBENV_ROOT=/usr/local/var/rbenv
 export PATH="/usr/local/mysql/bin:/usr/local/bin/gem:$PATH"

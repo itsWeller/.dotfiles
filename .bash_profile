@@ -16,11 +16,27 @@ source ~/.bashrc
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+alias ls='ls -G'
+
+function cs () {
+  cd "$@" && ls
+}
+
+function cu () {
+  cd ../ && ls
+}
+
 export PATH=/usr/local/bin:$PATH
 . ~/.bash_prompt
-alias ls='ls -G'
+alias cd=cs
 alias git=hub
+alias cdu=cu
 alias beer="bundle exec rake"
+complete -d cd
+complete -d ls
+complete -f vim
+
+
 
 set -o vi
 
