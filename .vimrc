@@ -1,3 +1,21 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+Bundle 'Valloric/YouCompleteMe'
+
+
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
 call pathogen#infect()
 call pathogen#helptags()
 
@@ -5,8 +23,6 @@ let mapleader = "\<Space>"
 
 syntax on
 set background=dark
-
-filetype plugin indent on
 
 set omnifunc=syntaxcomplete#Complete
 set completeopt-=preview
@@ -19,6 +35,7 @@ set wildmenu
 
 set hid
 set ruler!
+set relativenumber
 set nu
 
 set backspace=eol,start,indent
@@ -75,4 +92,6 @@ nmap <leader>bq :bp <BAR> bd #<CR>
 " Show all open buffers and their status
 nmap <leader>bl :ls<CR>
 
+" Add CtrlP
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
