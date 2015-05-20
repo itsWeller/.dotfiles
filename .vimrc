@@ -11,8 +11,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Bundle 'Valloric/YouCompleteMe'
 
-
-
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -94,4 +92,16 @@ nmap <leader>bl :ls<CR>
 
 " Add CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+let g:airline_theme='bubblegum'
+
+" Go to def/decl for YCM
+nnoremap <leader>gn :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>ga :YcmCompleter GoToDeclaration<CR>
+
+let g:tmuxline_powerline_separators = 0
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_alt_sep = ''
 
