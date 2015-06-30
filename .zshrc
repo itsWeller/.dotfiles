@@ -1,6 +1,3 @@
-# Set CSE131 java-cup jar classpath
-export CLASSPATH=/Users/chrisweller/Workspace/cse131/lib/java-cup-v11a.jar
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -53,8 +50,6 @@ HIST_STAMPS="mm/dd/yyyy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -81,3 +76,15 @@ export PATH="/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/
 # Vim editing is supreme editing
 bindkey -v
 stty stop undef
+
+# unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/help
+
+bindkey '^[OB' history-beginning-search-forward
+bindkey '^[OA' history-beginning-search-backward
+
+plugins=(git zsh-completions mvn pip vi-mode)
+autoload -U compinit && compinit
+
+export P4CONFIG=~/.p4settings

@@ -9,21 +9,33 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Raimondi/delimitMate'
+Plugin 'ervandew/supertab'
+Plugin 'justinmk/vim-sneak'
+Plugin 'kevinw/pyflakes-vim'
+
 Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-
-call pathogen#infect()
-call pathogen#helptags()
 
 let mapleader = "\<Space>"
 
 syntax on
 set background=dark
 
+" Autocomplete business. Vim is an IDE dammit.
 set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
 set completeopt-=preview
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
 
 set autoread
 
@@ -105,3 +117,7 @@ let g:airline_right_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_alt_sep = ''
 
+let g:EclimCompletionMethod = 'omnifunc'
+
+nnoremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
+nnoremap <silent> <buffer> <leader>i :JavaImport<cr>
