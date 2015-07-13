@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.itsweller.eclimd</string>
+        <key>OnDemand</key>
+        <false/>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>JAVA_HOME</key>
+            <string>/Library/Java/Home</string>
+        </dict>
+        <key>ProgramArguments</key>
+        <array>
+            <string>/Applications/eclipse/eclimd</string>
+        </array>
+        <key>ServiceDescription</key>
+        <string>Eclim Daemon</string>
+        <key>StandardErrorPath</key>
+        <string>/Users/cweller/.eclimd.stderr</string>
+        <key>StandardOutPath</key>
+        <string>/Users/cweller/.eclimd.stdout</string>
+        <key>UserName</key>
+        <string>cweller</string>
+    </dict>
+</plist>
